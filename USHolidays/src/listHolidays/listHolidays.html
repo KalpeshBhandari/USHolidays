@@ -1,0 +1,11 @@
+
+
+<li ng-repeat="holiday in listCtrl.holidayList">
+	<a ui-sref="holidayDetails({name: holiday.name,
+		date: holiday.date,
+		observed: holiday.observed,
+		public: holiday.public
+		})">
+		{{holiday.name}}
+	</a>
+</li>
