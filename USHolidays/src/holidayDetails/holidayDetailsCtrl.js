@@ -1,6 +1,6 @@
-var app = angular
-	.module('USHoliday', [])
-	.controller('holidayDetailsController', function ($http, $stateParams) {
+angular
+	.module('usHoliday')
+	.controller('HolidayDetailsController', function ($http, $stateParams) {
 		var vm = this;
 
 		vm.holidayDetail = {

@@ -1,6 +1,6 @@
-var app = angular
-	.module('USHoliday', [])
-	.controller('listController', function ($state) {
+angular
+	.module('usHoliday')
+	.controller('ListController', function ($state, $http ) {
 		var vm = this;
 
 		// This service call should be part of Angular singleton service layer
@@ -10,12 +10,12 @@ var app = angular
 			url: 'https://holidayapi.com/v1/holidays', // this url can be from CONSTANT file
 			method: 'get',
 			params: { 
-				key: $stateParams.id,
+				key: 'd9f13e79-b0ba-4d98-b15d-e29a6c94794f',
 				country: 'US',
 				year: '2017'
 			}
 		}).then(function (response) {
-			vm.holidayList = response.holidays;
+			vm.holidayList = response.data.holidays;
 			// here is the handler for success response.
 			//Keeping simple not implementing another then clause for
 			// error handling process.

@@ -1,18 +1,20 @@
+'use strict';
 angular
-	.module('USHoliday', ['ui-router'])
-	.config(function ($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise('/list');
+	.module('usHoliday', ['ui.router'])
+	.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+		$urlRouterProvider.otherwise('list');
 		$stateProvider
 			.state('list', {
-				url: '/list',
-				templateUrl: 'listHolidays/list.html',
-				controller: 'listController',
+				url: '/src/list',
+				templateUrl: 'src/listHolidays/listHolidays.html',
+				controller: 'ListController',
 				controllerAs: 'listCtrl'
 			})
 			.state('holidayDetails', {
-				url: '/details',
-				templateUrl: 'holidayDetails/holidayDetails.html',
-				controller: 'holidayDetailsController',
+				url: '/src/details',
+				templateUrl: 'src/holidayDetails/holidayDetails.html',
+				controller: 'HolidayDetailsController',
 				controllerAs: 'holidayDetailsCtrl'
 			})
+			$locationProvider.html5Mode(true);
 	})
