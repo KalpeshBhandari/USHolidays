@@ -1,0 +1,10 @@
+<h1>City Population Details</h1>
+<h2>{{populationDetail.city}}</h2>
+<div>
+	<span>State: {{populationDetail.state}}</span>
+	<span>Population: <input type="text" name="population" ng-model="populationDetail.pop" ></span>
+	<span>Zip: {{populationDetail.zip}}</span>
+</div>
+
+<input type="button" value="Save" ng-click="saveCityPopulation(populationDetail.zip)">
+<input type="button" value="Cancel" ng-click="redirectToList()">

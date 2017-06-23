@@ -1,0 +1,19 @@
+
+<table>
+	<tr ng-repeat="city in listCtrl.cityPopulationList">
+		<td>
+			<a ui-sref="populationDetails({zip: city.zip})">
+				{{city.city}}
+			</a>
+		</td>
+		<td>
+			{{city.state}}
+		</td>
+		<td>
+			{{city.zip}}
+		</td>
+		<td>
+			{{city.pop}}
+		</td>
+	</tr>
+</table>
